@@ -1,0 +1,29 @@
+## Ignore the env local files in frontend/backend
+
+./frontend/.env*
+./backend/.env*
+./backend/audios/
+./backend/audios/*
+
+## Ignore the node_modules
+
+./frontend/node_modules/
+./frontend/jspm_packages/
+
+
+
+
+
+frontend/.next/
+
+frontend/node_modules/
+frontend/jspm_packages/
+
+frontend/.env*
+
+backend/.env*
+backend/audios/
+backend/audios/*
+
+backend/venv/
+
