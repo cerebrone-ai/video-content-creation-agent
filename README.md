@@ -1,87 +1,125 @@
-# Cerebrone_Video_Generator
+# 🎥 Cerebrone Video Content Generator Agent
 
-A Flask-based application that uses LangChain, GPT-4, and Fal AI to generate complete videos with voiceovers.
+🚀 **Cerebrone Video Content Generator Agent** is a powerful, AI-driven video generation application that leverages **LangChain, GPT-4, and Fal AI** to produce fully-automated, high-quality videos with professional voiceovers.
 
-## Features
+## ✨ Features
 
-- Generate complete video production plans including:
-  - Deep research based video script generation
-  - Detailed storyboards broken into scenes
-  - Shot-by-shot details with AI prompts and voiceover scripts
-- Asynchronous video and voiceover generation using Fal AI
-- Structured output using Pydantic models
-- Configurable video parameters (duration, target audience, etc.)
-- Error handling and logging
-- CORS support
-- Health check endpoint
+- **AI-Powered Video Production**
+  - Deep-researched, AI-generated video scripts
+  - Storyboard breakdowns with scene-by-scene details
+  - Shot-by-shot planning with AI-generated prompts & voiceovers
 
-## Prerequisites
+- **Advanced Video & Voiceover Generation**
+  - Asynchronous video & voiceover rendering using **Fal AI**
+  - Structured and validated outputs using **Pydantic models**
 
-- Python 3.11+
-- Fal AI account
-- OpenAI API key
-- Serper Dev Key
+- **Flexible & Configurable**
+  - Customize video parameters (duration, target audience, style, etc.)
+  - Robust error handling and logging for smooth execution
 
-## Installation
+- **Modern API & UI**
+  - **Flask** backend for scalable API handling
+  - **Next.js** frontend for an intuitive user experience
+  - CORS support for cross-origin accessibility
+  - Health check endpoint for monitoring
 
-1. Clone the repository
-2. Create a virtual environment:
-    ```bash
+## 📌 Prerequisites
+
+Before getting started, ensure you have the following installed:
+
+- **Python 3.11+**
+- **Node.js 18+** (for the frontend)
+- **Fal AI Account**
+- **OpenAI API Key**
+- **Serper Dev Key**
+- **Docker (Optional, for containerized deployment)**
+
+## 🔧 Installation
+
+### 1️⃣ Clone the Repository
+```sh
+$ git clone https://github.com/cerebrone-ai/video-content-creation-agent.git
+$ cd video-content-creation-agent
+```
+
+### 2️⃣ Backend Setup
+
+1. Create a virtual environment and activate it:
+    ```sh
     python -m venv venv
-    source venv/bin/activate # On Windows: venv\Scripts\activate
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
     ```
-3. Install dependencies:
-    ```bash
+2. Install dependencies:
+    ```sh
     pip install -r requirements.txt
     ```
-
-4. Create a `.env` file with your API keys and configuration within backend folder:
-    ```bash
+3. Configure environment variables:
+    - Create a `.env` file inside the `backend/` directory:
+    ```sh
     OPENAI_API_KEY=<your_openai_api_key>
     FAL_KEY=<your_fal_ai_key>
     ```
-5. Create a '.env.local' file with your API Keys and configurations within frontend folder:
-   ```bash
-   
-    NEXT_PUBLIC_API_URL=http://localhost:8000
-    NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/
-   ```
-
-## Usage
-
-1. Start the Flask server:
-    ```bash
+4. Start the backend server:
+    ```sh
     cd backend
     python main.py
     ```
-2. Start the frontend Application:
 
-   ```bash
-   cd frontend
-   npm i -f
-   npm run build
-   npm start
-   ```
+### 3️⃣ Frontend Setup
 
+1. Navigate to the `frontend/` folder:
+    ```sh
+    cd frontend
+    ```
+2. Install dependencies:
+    ```sh
+    npm install -f
+    ```
+3. Configure environment variables:
+    - Create a `.env.local` file inside `frontend/`:
+    ```sh
+    NEXT_PUBLIC_VIDEO_API_URL=http://localhost:5002/
+    ```
+4. Build and start the frontend application:
+    ```sh
+    npm run build
+    npm start
+    ```
 
-## Docker
+## 🐳 Docker Deployment
 
-1. Copy the required env variable in the project root dir:
+For containerized deployment, follow these steps:
 
-   ```sh
-   $ cp $PWD/backend/env.example $PWD/backend/.env.backend
-   ```
+1. Copy environment variables into the project root directory:
+    ```sh
+    cp $PWD/backend/env.example $PWD/backend/.env.backend
+    cp $PWD/frontend/env.example $PWD/frontend/.env.frontend
+    ```
 
-   ```sh
-   $ cp $PWD/frontend/env.example $PWD/frontend/.env.frontend
-   ```
-
-2. Run the docker using the docker compose. For installation please refer to the [link](https://docs.docker.com/compose/install/).
-
+2. Run Docker Compose:
     ```sh
     docker-compose up --build
     ```
 
+## 🎯 Contributing
 
+We welcome contributions from the community! 🚀 If you'd like to contribute:
 
+1. **Fork** the repository.
+2. **Create a new branch** for your feature/fix.
+3. **Commit your changes** with clear descriptions.
+4. **Submit a pull request** for review.
 
+## 📜 License
+
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for more details.
+
+## ⭐ Acknowledgements
+
+- **OpenAI** for GPT-4
+- **LangChain** for AI-driven workflow execution
+- **Fal AI** for seamless video & voiceover generation
+
+💡 If you find this project useful, consider giving it a **star ⭐ on GitHub**!
+
+---
