@@ -58,6 +58,7 @@ $ cd video-content-creation-agent
     ```sh
     OPENAI_API_KEY=<your_openai_api_key>
     FAL_KEY=<your_fal_ai_key>
+    SERPER_API_KEY=<Serper Key>
     ```
 4. Start the backend server:
     ```sh
